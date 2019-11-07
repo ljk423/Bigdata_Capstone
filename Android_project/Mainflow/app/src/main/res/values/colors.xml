@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    // color for warning
+    <color name="fine">#00FF08</color>
+    <color name="danger">#FF0000</color>
+    <color name="warning">#FFBB00</color>
+</resources>
