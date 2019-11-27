@@ -1,0 +1,86 @@
+{%   extends  'navbar.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block title %}mainpage{% endblock %}
+
+{% block content %}
+
+<main data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="container-fluid" style="margin-top:80px">
+    <div class="site-section" id="classes-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-8  section-heading">
+            <span class="subheading">Daily Index</span>
+            <h2 class="heading mb-3"></h2>
+            <p>매일 업데이트 되는 보건기상지수 10종을 보여주는 페이지입니다</p>
+          </div>
+        </div>
+          {% if indexInfo.key_coldindex %}
+          <!-- 1. 감기지수 -->
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href= {% url 'coldindex' %} class="class-item-thumbnail">
+                <img src= "home/static/images/img_1.jpg" alt="Image">
+              </a>
+              <div class="class-item-text">
+                <h2><a href=#>감기 지수</a></h2>
+                <span>Date</span>,
+                <span>Show more</span>
+              </div>
+            </div>
+              {% endif %}
+        {% if indexInfo.key_index1 %}
+            <!-- 2. index -->
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="images/img_2.jpg" alt="Image">
+              </a>
+              <div class="class-item-text">
+
+                <h2><a href=#>{{ name_index1 }}</a></h2>
+                <span>Date</span>,
+                <span>show more</span>
+              </div>
+            </div>
+        {% endif %}
+        {% if indexInfo.key_index2 %}
+            <!-- 2. index -->
+            <div class="class-item d-flex align-items-center">
+              <a href=# class="class-item-thumbnail">
+                <img src="images/img_2.jpg" alt="Image">
+              </a>
+              <div class="class-item-text">
+
+                <h2><a href=#>{{ name_index2 }}</a></h2>
+                <span>Date</span>,
+                <span>show more</span>
+              </div>
+            </div>
+        {% endif %}
+            {% if indexInfo.key_index3 %}
+              <!-- 2. index -->
+            <div class="class-item d-flex align-items-center">
+              <a href=#" class="class-item-thumbnail">
+                <img src="images/img_2.jpg" alt="Image">
+              </a>
+              <div class="class-item-text">
+
+                <h2><a href="single.html">{{ name_index3 }}</a></h2>
+                <span>Date</span>,
+                <span>show more</span>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+</main>
+{% endblock %}
