@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9acd54d7-8e2a-4978-8e0e-9c1212d21f24" name="Default Changelist" comment="" />
+    <list default="true" id="9acd54d7-8e2a-4978-8e0e-9c1212d21f24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/static/images/temporary_chart.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/js/chart-area-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../django_result/WA_coldpage.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../django_result/WA_main1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../django_result/WA_main2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/disease1.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/disease1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/mainpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -37,11 +48,13 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git\Bigdata_Capstone\Django_project\home\static\js" />
       <recent name="C:\git\Bigdata_Capstone\django_project\home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git\Bigdata_Capstone\Django_project\home\static\images" />
+      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -94,6 +107,7 @@
       <updated>1574788939457</updated>
       <workItem from="1574788941294" duration="1659000" />
       <workItem from="1574832271865" duration="5929000" />
+      <workItem from="1574842630388" duration="4345000" />
     </task>
     <servers />
   </component>

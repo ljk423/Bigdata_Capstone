@@ -19,22 +19,125 @@
             <p>매일 업데이트 되는 보건기상지수 10종을 보여주는 페이지입니다</p>
           </div>
         </div>
-          {% if indexInfo.key_coldindex %}
+          <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">기상예측정보</h1>
+          </div>
+
+          <div class="row">
+
+            <!-- 1. 미세먼지 카드 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">미세먼지</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">26㎍/㎥</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2. 최저기온 카드 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">최저기온</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">1℃</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!-- 3. 최고기온 카드 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">최고기온</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">10℃</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. 풍속 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">풍속</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">7km/h</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!-- 5. 평균습도 카드 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">평균습도</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+
+            <div class="col-lg-6">
+
           <!-- 1. 감기지수 -->
         <div class="row">
           <div class="col-lg-6">
             <div class="class-item d-flex align-items-center">
-              <a href= {% url 'coldindex' %} class="class-item-thumbnail">
+              <a href= {% url 'disease1' %} class="class-item-thumbnail">
                 <img src= "home/static/images/img_1.jpg" alt="Image">
               </a>
               <div class="class-item-text">
-                <h2><a href=#>감기 지수</a></h2>
+                <h2><a href={% url 'disease1' %}>감기 지수</a></h2>
                 <span>Date</span>,
                 <span>Show more</span>
               </div>
             </div>
-              {% endif %}
-        {% if indexInfo.key_index1 %}
+
             <!-- 2. index -->
             <div class="class-item d-flex align-items-center">
               <a href="single.html" class="class-item-thumbnail">
@@ -47,8 +150,7 @@
                 <span>show more</span>
               </div>
             </div>
-        {% endif %}
-        {% if indexInfo.key_index2 %}
+
             <!-- 2. index -->
             <div class="class-item d-flex align-items-center">
               <a href=# class="class-item-thumbnail">
@@ -61,8 +163,7 @@
                 <span>show more</span>
               </div>
             </div>
-        {% endif %}
-            {% if indexInfo.key_index3 %}
+
               <!-- 2. index -->
             <div class="class-item d-flex align-items-center">
               <a href=#" class="class-item-thumbnail">
@@ -75,7 +176,7 @@
                 <span>show more</span>
               </div>
             </div>
-            {% endif %}
+
           </div>
 
         </div>
