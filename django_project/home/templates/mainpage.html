@@ -4,7 +4,9 @@
 
 {% endblock %}
 
-{% block title %}mainpage{% endblock %}
+{% block title %}
+    mainpage
+{% endblock %}
 
 {% block content %}
 
@@ -125,59 +127,24 @@
             <div class="col-lg-6">
 
           <!-- 1. 감기지수 -->
+
         <div class="row">
+            {% for index in indexes %}
           <div class="col-lg-6">
             <div class="class-item d-flex align-items-center">
-              <a href= {% url 'disease1' %} class="class-item-thumbnail">
-                <img src= "home/static/images/img_1.jpg" alt="Image">
+              <a href= "{{ index.next_page }}", class="class-item-thumbnail">
+                <img src= '{{ index.image }}', alt = "image">
               </a>
               <div class="class-item-text">
-                <h2><a href={% url 'disease1' %}>감기 지수</a></h2>
-                <span>Date</span>,
-                <span>Show more</span>
-              </div>
-            </div>
-
-            <!-- 2. index -->
-            <div class="class-item d-flex align-items-center">
-              <a href="single.html" class="class-item-thumbnail">
-                <img src="images/img_2.jpg" alt="Image">
-              </a>
-              <div class="class-item-text">
-
-                <h2><a href=#>{{ name_index1 }}</a></h2>
-                <span>Date</span>,
-                <span>show more</span>
-              </div>
-            </div>
-
-            <!-- 2. index -->
-            <div class="class-item d-flex align-items-center">
-              <a href=# class="class-item-thumbnail">
-                <img src="images/img_2.jpg" alt="Image">
-              </a>
-              <div class="class-item-text">
-
-                <h2><a href=#>{{ name_index2 }}</a></h2>
-                <span>Date</span>,
-                <span>show more</span>
-              </div>
-            </div>
-
-              <!-- 2. index -->
-            <div class="class-item d-flex align-items-center">
-              <a href=#" class="class-item-thumbnail">
-                <img src="images/img_2.jpg" alt="Image">
-              </a>
-              <div class="class-item-text">
-
-                <h2><a href="single.html">{{ name_index3 }}</a></h2>
-                <span>Date</span>,
-                <span>show more</span>
+                <h2><a href= "{{ index.next_page }}" %}>{{ index.name }}</a></h2>
+                <span>{{ index.date }}</span>,
+                  <span>{{ index.local_code }}</span>,
+                <span>{{ index.disease_index}}</span>
               </div>
             </div>
 
           </div>
+            {% endfor %}
 
         </div>
       </div>

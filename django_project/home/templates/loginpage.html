@@ -1,18 +1,21 @@
 {% load static %}
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="{% static 'css/cover.css' %}">
+
 </head>
 
 
-<form class="form-signin">
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+<div class="container">
+  <h1>Login</h1>
     <form method="POST" action="{% url 'mainpage' %}">
-  <label for="inputID" class="sr-only">Enter ID</label>
-  <input type="id" id="inputID" class="form-control" placeholder="Enter of ID" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-  <button class="btn btn-lg btn-primary btn-block" href="{% url 'mainpage' %}">Sign in</button>
-
+        {% csrf_token %}
+        Username:
+        <br>
+        <input name="username"type="text">
+        <br>
+        Password:
+        <br>
+        <input name="password" type="password">
+        <br><br>
+        <input type="submit" class="btn btn-primary" value="mainpage">
     </form>
-</form>
+</div>

@@ -1,0 +1,39 @@
+{% extends 'navbar.html' %}
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <main data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+        <div class="container-fluid" style="margin-top:80px">
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <!-- Content Row -->
+    <div id="morrisChart"> </div>
+        <script>
+            new Morris.Line({
+                element: 'morrisChart',
+                data: [
+                    { date: '1201', value: 1 },
+                    { date: '1202', value: 2 },
+                    { date: '1203', value: 2 },
+                    { date: '1204', value: 1},
+                    { date: '1205', value: 2}
+
+                ],
+                xkey: 'date',
+                ykeys: ['value'],
+                labels: ['value']
+            });
+        </script>
+        </div>
+    <div class="container-fluid">
+        <h1>대처요령</h1>
+    <br>
+    <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
+    </div>
+    </main>
+{% endblock %}
+
+

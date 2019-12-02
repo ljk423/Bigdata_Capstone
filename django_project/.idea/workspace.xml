@@ -38,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,10 +49,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates" />
       <recent name="D:\git\Bigdata_Capstone\Django_project\home\static\js" />
       <recent name="C:\git\Bigdata_Capstone\django_project\home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\git\Bigdata_Capstone\django_project\home\static\images" />
       <recent name="D:\git\Bigdata_Capstone\Django_project\home\static\images" />
       <recent name="C:\git\Bigdata_Capstone\django_project\home\templates" />
     </key>
@@ -108,6 +110,11 @@
       <workItem from="1574788941294" duration="1659000" />
       <workItem from="1574832271865" duration="5929000" />
       <workItem from="1574842630388" duration="4345000" />
+      <workItem from="1575206505323" duration="9000" />
+      <workItem from="1575285417406" duration="1370000" />
+      <workItem from="1575296909576" duration="6061000" />
+      <workItem from="1575305136654" duration="7660000" />
+      <workItem from="1575315363838" duration="3273000" />
     </task>
     <servers />
   </component>
