@@ -16,16 +16,19 @@
                 element: 'morrisChart',
                 title: "Weekly Chart",
                 data: [
-                    { date: '1201', value: 1 },
-                    { date: '1202', value: 2 },
-                    { date: '1203', value: 2 },
-                    { date: '1204', value: 1},
-                    { date: '1205', value: 2}
+                    { date: '2019-12-01', value: 1 },
+                    { date: '2019-12-02', value: 2 },
+                    { date: '2019-12-03', value: 2 },
+                    { date: '2019-12-04', value: 1},
+                    { date: '2019-12-05', value: 2}
 
                 ],
                 xkey: 'date',
                 ykeys: ['value'],
-                labels: ['value']
+                labels: ['value'],
+                xlabels: ['day'],
+                ymin : 1,
+                ymax : 4
             });
         </script>
         </div>
@@ -33,6 +36,32 @@
         <h1>오늘의 뇌졸중지수 대처요령</h1>
     <br>
     <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
+        {% if 2 == 4 %}
+        <div class="contact-wrap">
+            ▶ 꾸준한 혈압, 혈당, 콜레스테롤 수치를 측정하고 정상 수준으로 유지하도록 함<br>
+            ▶ 급격한 날씨 변화에 노출되지 않도록 외출 및 환기에 주의하기<br>
+            ▶ 고혈압 뇌졸중 기왕력 환자들은 각별한 주의 요망
+        </div>
+        {% endif %}
+    {% if 2 == 3 %}
+        <div class="contact-wrap">
+            ▶ 혈압측정을 꾸준히 하면서 정상 혈압이 유지되도록 함<br>
+            ▶ 건강에 더욱 관심을 가지고 추운 곳으로 외출할 경우 보온 유지하기<br>
+            ▶ 특히 온도가 낮은 새벽이나 밤 시간을 피해 외출함
+        </div>
+        {% endif %}
+    {% if 2 == 2 %}
+        <div class="contact-wrap">
+            ▶ 평소 건강관리에 유의하고 규칙적인 운동과 함께 식습관 조절하기<br>
+            ▶ 뇌졸중 환자들은 외출 시 갑작스럽게 체온이 변하지 않도록 보온에 유념함
+        </div>
+        {% endif %}
+    {% if 2 == 1 %}
+        <div class="contact-wrap">
+            ▶ 평소 뇌졸중 예방을 위한 건강관리에 유의하여 음식 섭취를 조절하고 가벼운 운동을 함
+        </div>
+        {% endif %}
+    <!-- 위 4가지 형식으로 대처 요령을 제공, 이후 DB model date == today 이런 식으로 해서 제 값을 넣는다. -->
     </div>
     </main>
 {% endblock %}

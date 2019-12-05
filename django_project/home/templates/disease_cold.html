@@ -24,7 +24,9 @@
                 ],
                 xkey: 'date',
                 ykeys: ['value'],
-                labels: ['value']
+                labels: ['value'],
+                ymin : 1,
+                ymax : 4,
             });
         </script>
         </div>
@@ -33,6 +35,30 @@
         <h1>오늘의 감기지수 대처요령</h1>
     <br>
     <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
+     {% if 1 == 4 %}
+        <div class="contact-wrap">
+            ▶ 가급적 외출을 자제하고 과로하지 말기<br>
+            ▶ 외출 시 마스크, 목도리 등을 착용하여 몸을 따뜻하게 하고 체온 유지하기<br>
+            ▶ 머리나 몸이 물에 젖어있을 경우 몸을 충분히 말린 후 외출하기
+        </div>
+        {% endif %}
+    {% if 1 == 3 %}
+        <div class="contact-wrap">
+            ▶ 충분한 수면을 취하고, 과로하지 말기<br>
+            ▶ 체온을 유지하고 실내 적정한 온습도 유지하기
+        </div>
+        {% endif %}
+    {% if 1 == 2 %}
+        <div class="contact-wrap">
+            ▶ 규칙적인 생활습관 유지하기<br>
+            ▶ 수분을 적절히 섭취하고, 외출 후 손과 발을 씻음
+        </div>
+        {% endif %}
+    {% if 1 == 1 %}
+        <div class="contact-wrap">
+            ▶ 감기예방을 위한 건강한 생활습관 유지
+        </div>
+        {% endif %}
     </div>
 {% endblock %}
 
