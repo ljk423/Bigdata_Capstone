@@ -23,6 +23,10 @@ def mainpage(request):
     indexes = models.MainWeatherIndex.objects.order_by('name')
     return render(request, 'mainpage.html',{'indexes': indexes})
 
+def mainpage1(request):
+    indexes = models.MainWeatherIndex.objects.order_by('name')
+    return render(request, 'mainpage1.html',{'indexes': indexes})
+
 def disease_Asthma(request):
     #1. create datapool with the data
     indexes = models.AsthmaIndex.objects.order_by('date')

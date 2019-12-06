@@ -10,4 +10,5 @@ urlpatterns = [
     path('mainpage/disease_stroke', views.disease_Stroke, name='disease_stroke'),
     path('signup', views.signup, name='signup'),
     path('mainpage/memberInfo', views.memberInfo, name='memberInfo'),
+    path('mainpage1/', views.mainpage1, name='mainpage1'),
 ]

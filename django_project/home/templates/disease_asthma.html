@@ -4,63 +4,14 @@
 
 {% block content %}
     <main data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-        <div class="container-fluid" style="margin-top:80px">
-            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-    <!-- Content Row -->
-    <div id="morrisChart"> </div>
-        <script>
-            new Morris.Line({
-                element: 'morrisChart',
-                data: [
-                    { date: '1201', value: 1 },
-                    { date: '1202', value: 2 },
-                    { date: '1203', value: 2 },
-                    { date: '1204', value: 1},
-                    { date: '1205', value: 2},
-                    { date: '1206', value : 3}
 
-                ],
-                xkey: 'date',
-                ykeys: ['value'],
-                labels: ['value'],
-                ymin : 1,
-                ymax : 4,
-            });
-        </script>
-        </div>
-    <div class="container-fluid">
+    </main>   <div class="container-fluid">
         <h1>오늘의 천식지수 대처요령</h1>
     <br>
     <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
-        {% if 1 == 4 %}
-        <div class="contact-wrap">
-            ▶ 청결한 환경을 유지하는데 각별히 신경 쓰기<br>
-            ▶ 천식환자들은 각별한 주의 요망
-        </div>
-        {% endif %}
-    {% if 1 == 3 %}
-        <div class="contact-wrap">
-            ▶ 실내를 청결하게 하고 자주 환기하기<br>
-            ▶ 대기오염이 증가하는 시기에는 창문과 문을 닫아 외부 노출을 줄이고 공기청정기 사용하기
-        </div>
-        {% endif %}
-    {% if 1 == 2 %}
-        <div class="contact-wrap">
-            ▶ 규칙적인 생활습관 유지하기<br>
-            ▶ 만성 천식·폐질환 환자들은 주의
-        </div>
-        {% endif %}
-    {% if 1 == 1 %}
-        <div class="contact-wrap">
-            ▶ 평소 건강 관리에 유의하기
-        </div>
-        {% endif %}
+
     <!-- 위 4가지 형식으로 대처 요령을 제공, 이후 DB model date == today 이런 식으로 해서 제 값을 넣는다. -->
     </div>
-    </main>
 {% endblock %}
 
 

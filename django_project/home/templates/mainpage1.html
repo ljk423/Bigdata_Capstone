@@ -1,0 +1,138 @@
+{%   extends  'navbar.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block title %}
+    mainpage1
+{% endblock %}
+
+{% block content %}
+ <main data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+     <div class = "container-fluid" style="margin-top:100px">
+         <h3> 12-04 / Seoul</h3>
+         <br>
+     </div>
+
+     <div class="container-fluid">
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <!-- Content Row -->
+    <div id="morrisChart"> </div>
+        <script>
+            new Morris.Line({
+                element: 'morrisChart',
+                data: [
+                    { date: '2019-12-01', cold: 1, asthma: 1, stroke: 1},
+                    { date: '2019-12-02', cold: 4, asthma: 2, stroke: 1},
+                    { date: '2019-12-03', cold: 3, asthma: 2, stroke: 2},
+                    { date: '2019-12-04', cold: 2, asthma: 2, stroke: 3},
+                    { date: '2019-12-05', cold: 3, asthma: 2, stroke: 1},
+                    { date: '2019-12-06', cold: 2, asthma: 2, stroke: 3},
+                    { date: '2019-12-07', cold: 3, asthma: 2, stroke: 1},
+                ],
+                xkey: 'date',
+                ykeys: ['cold', 'asthma', 'stroke'],
+                labels: ['감기지수', '천식폐질환지수', '뇌졸중지수'],
+                ymin : 1,
+                ymax : 4,
+            });
+        </script>
+        </div>
+     <div class="container-fluid">
+          <h1>오늘의 질병지수 대처요령</h1>
+    <br>
+    <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
+     <div class="contact-wrap">
+     <!-- cold -->
+         {% if 1 == 4 %}
+            ▶ 가급적 외출을 자제하고 과로하지 말기<br>
+            ▶ 외출 시 마스크, 목도리 등을 착용하여 몸을 따뜻하게 하고 체온 유지하기<br>
+            ▶ 머리나 몸이 물에 젖어있을 경우 몸을 충분히 말린 후 외출하기
+        {% endif %}
+    {% if 1 == 3 %}
+            ▶ 충분한 수면을 취하고, 과로하지 말기<br>
+            ▶ 체온을 유지하고 실내 적정한 온습도 유지하기
+        {% endif %}
+    {% if 1 == 2 %}
+            ▶ 규칙적인 생활습관 유지하기<br>
+            ▶ 수분을 적절히 섭취하고, 외출 후 손과 발을 씻음
+        {% endif %}
+    {% if 1 == 1 %}
+            ▶ 감기예방을 위한 건강한 생활습관 유지<br>
+        {% endif %}
+     <!-- stroke -->
+        {% if 2 == 4 %}
+            ▶ 꾸준한 혈압, 혈당, 콜레스테롤 수치를 측정하고 정상 수준으로 유지하도록 함<br>
+            ▶ 급격한 날씨 변화에 노출되지 않도록 외출 및 환기에 주의하기<br>
+            ▶ 고혈압 뇌졸중 기왕력 환자들은 각별한 주의 요망
+        {% endif %}
+    {% if 2 == 3 %}
+            ▶ 혈압측정을 꾸준히 하면서 정상 혈압이 유지되도록 함<br>
+            ▶ 건강에 더욱 관심을 가지고 추운 곳으로 외출할 경우 보온 유지하기<br>
+            ▶ 특히 온도가 낮은 새벽이나 밤 시간을 피해 외출함
+        {% endif %}
+    {% if 2 == 2 %}
+            ▶ 평소 건강관리에 유의하고 규칙적인 운동과 함께 식습관 조절하기<br>
+            ▶ 뇌졸중 환자들은 외출 시 갑작스럽게 체온이 변하지 않도록 보온에 유념함<br>
+        {% endif %}
+    {% if 2 == 1 %}
+            ▶ 평소 뇌졸중 예방을 위한 건강관리에 유의하여 음식 섭취를 조절하고 가벼운 운동을 함
+        {% endif %}
+      {% if 1 == 4 %}
+            ▶ 청결한 환경을 유지하는데 각별히 신경 쓰기<br>
+            ▶ 천식환자들은 각별한 주의 요망
+
+        {% endif %}
+     <!-- asthma -->
+    {% if 1 == 3 %}
+            ▶ 실내를 청결하게 하고 자주 환기하기<br>
+            ▶ 대기오염이 증가하는 시기에는 창문과 문을 닫아 외부 노출을 줄이고 공기청정기 사용하기
+
+        {% endif %}
+    {% if 1 == 2 %}
+            ▶ 규칙적인 생활습관 유지하기<br>
+            ▶ 만성 천식·폐질환 환자들은 주의
+        {% endif %}
+    {% if 1 == 1 %}
+            ▶ 평소 건강 관리에 유의하기
+        {% endif %}
+        </div>
+    <div class="container" style="top-margin:20px">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">today</th>
+                <th scope="col">tomorrow</th>
+                <th scope="col">12-06</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" href="{% url 'disease_cold' %}">감기지수</th>
+                    <td class="bg-primary">보통</td>
+                    <td class="bg-danger">나쁨</td>
+                    <td class="bg-primary">보통</td>
+                </tr>
+                <tr>
+                    <th scope="row">천식지수</th>
+                    <td class="bg-primary">보통</td>
+                    <td class="bg-primary">보통</td>
+                    <td class="bg-primary">보통</td>
+                </tr>
+                <tr>
+                    <th scope="row">뇌졸중지수</th>
+                    <td class="bg-danger">나쁨</td>
+                    <td class="bg-primary">좋음</td>
+                    <td class="bg-danger">나쁨</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </main>
+
+{% endblock %}
