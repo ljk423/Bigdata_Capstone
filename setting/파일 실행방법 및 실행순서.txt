@@ -1,0 +1,27 @@
+1. 파일 환경설정
+settings.zip에 개발환경이 포함 안 되어있어 아래 방법으로 설명 드립니다.
+
+Anaconda3\envs\ 에 pythonenv 저장
+
+pycharm에서 File > settings
+
+> project intepreter -> pythonenv 지정
+
+> tools > Terminal -> git bash file 저장된 로컬 주소 사용
+
+2. 실행 방법
+local terminal 창에 $ python manage.py runserver 입력
+
+이후 생성되는 주소 하이퍼링크를 클릭하면 기본 로그인 화면 작동
+
+3. 실행 순서
+
+loginpage - mainpage(기존 디자인) - 개별 질병 정보 페이지 순으로 접속
+
+login은 tester / 1234 이나 로그인 절차 없이 버튼 클릭으로도 이동 가능
+
+mainpage, 개별 질병 정보 페이지는 현재 더미 데이터로 구성되어 있음
+
+질병 정보 생성 함수를 보내주면 거기에 맞춰 DB 모델에 저장하고 템플릿 언어로 출력 가능
+
+
