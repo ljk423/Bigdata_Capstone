@@ -53,6 +53,12 @@ def disease_Asthma(request):
 
     return render(request, 'asthma/disease_asthma_서울.html', {'indexes':indexes})
 
+def disease_Asthma_서울(request):
+    #1. create datapool with the data
+    indexes = models.AsthmaIndex.objects.order_by('date')
+
+    return render(request, 'asthma/disease_asthma_서울.html', {'indexes':indexes})
+
 def disease_Cold_서울(request):
     #1. create datapool with the data
 

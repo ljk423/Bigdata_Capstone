@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block title %}
-    mainpage1
+    mainpage_광주
 {% endblock %}
 
 {% block content %}
@@ -26,13 +26,13 @@
             new Morris.Line({
                 element: 'morrisChart',
                 data: [
-                    { date: '2019-12-01', cold: 1, asthma: 1, stroke: 1},
-                    { date: '2019-12-02', cold: 4, asthma: 2, stroke: 1},
-                    { date: '2019-12-03', cold: 3, asthma: 2, stroke: 2},
-                    { date: '2019-12-04', cold: 2, asthma: 2, stroke: 3},
-                    { date: '2019-12-05', cold: 3, asthma: 2, stroke: 1},
-                    { date: '2019-12-06', cold: 2, asthma: 2, stroke: 3},
-                    { date: '2019-12-07', cold: 3, asthma: 2, stroke: 1},
+                    { date: '2019-12-06', cold: 1, asthma: 1, stroke: 1},
+                    { date: '2019-12-07', cold: 4, asthma: 2, stroke: 1},
+                    { date: '2019-12-08', cold: 3, asthma: 2, stroke: 2},
+                    { date: '2019-12-09', cold: 2, asthma: 2, stroke: 3},
+                    { date: '2019-12-10', cold: 2, asthma: 2, stroke: 3},
+                    { date: '2019-12-11', cold: 3, asthma: 2, stroke: 1},
+                    { date: '2019-12-12', cold: 2, asthma: 2, stroke: 3},
                 ],
                 xkey: 'date',
                 ykeys: ['cold', 'asthma', 'stroke'],
@@ -131,13 +131,14 @@
                 </div>
               </div>
             </div>
+            <!-- 2. 최저기온 카드 -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">미세먼지</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">26㎍/㎥</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">평균해면기압</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">1018.9 hPa</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -152,8 +153,8 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">최저기온</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">1℃</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">오존</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">0.01 ppm</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -168,8 +169,8 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">최고기온</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">10℃</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">이산화질소</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">0.054 ppm</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -185,8 +186,8 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">풍속</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">7km/h</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">아황산가스</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">0.004 ppm</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -195,39 +196,35 @@
                 </div>
               </div>
             </div>
-              <!-- 5. 평균습도 카드 -->
+             <!-- 4. 풍속 -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
+              <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">평균습도</div>
-                      <div class="row no-gutters align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                        </div>
-                        <div class="col">
-                          <div class="progress progress-sm mr-2">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">일산화탄소</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">1 ppm</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+              </div>
+
         </div>
      <div class="container-fluid">
-          <h1>오늘의 질병지수 대처요령</h1>
+
     <br>
-    <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
      <div class="contact-wrap">
-     <!-- cold -->
+     <!-- cold --> <div class="card", size="width:400 rem">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><h1>오늘의 질병지수 대처요령</h1></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
          {% if 1 == 4 %}
             ▶ 가급적 외출을 자제하고 과로하지 말기<br>
             ▶ 외출 시 마스크, 목도리 등을 착용하여 몸을 따뜻하게 하고 체온 유지하기<br>
@@ -280,35 +277,52 @@
     {% if 1 == 1 %}
             ▶ 평소 건강 관리에 유의하기
         {% endif %}
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
     <div class="container" style="top-margin:20px">
         <table class="table table-striped">
             <thead>
             <tr>
                 <th scope="col"></th>
-                <th scope="col">today</th>
-                <th scope="col">tomorrow</th>
-                <th scope="col">12-06</th>
+                <th scope="col" colspan="2">today</th>
+                <th scope="col" colspan="2">tomorrow</th>
+                <th scope="col" colspan="2">12-06</th>
             </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row" href="{% url 'disease_cold' %}">감기지수</th>
-                    <td class="bg-primary">보통</td>
-                    <td class="bg-danger">나쁨</td>
-                    <td class="bg-primary">보통</td>
+                    <th scope="row">감기지수</th>
+                    <td><a href="{% url 'disease_cold_광주' %}">보통</a></td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                    <td><a href="{% url 'disease_cold_광주' %}">나쁨</a></td>
+                    <td><img src="/static/images/panel_red.png"width=70 height=50 ></td>
+                    <td><a href="{% url 'disease_cold_광주' %}">보통</a></td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
                 </tr>
                 <tr>
                     <th scope="row">천식지수</th>
-                    <td class="bg-primary">보통</td>
-                    <td class="bg-primary">보통</td>
-                    <td class="bg-primary">보통</td>
+                    <td><a href="{% url 'disease_cold_광주' %}">보통</a></td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                    <td><a href="{% url 'disease_cold_광주' %}">보통</a></td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                    <td><a href="{% url 'disease_cold_광주' %}">보통</a></td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
                 </tr>
                 <tr>
-                    <th scope="row">뇌졸중지수</th>
-                    <td class="bg-danger">나쁨</td>
-                    <td class="bg-primary">좋음</td>
-                    <td class="bg-danger">나쁨</td>
+                    <th>뇌졸중지수</th>
+                    <td><a href="{% url 'disease_stroke_incheon' %}">나쁨</a></td>
+                    <td><img src="/static/images/panel_red.png"width=70 height=50 ></td>
+                    <td><a href="{% url 'disease_stroke_incheon' %}">좋음</a></td>
+                    <td><img src="/static/images/panel_green.png"width=70 height=50 ></td>
+                    <td><a href="{% url 'disease_stroke_incheon' %}">나쁨</a></td>
+                    <td><img src="/static/images/panel_red.png"width=70 height=50 ></td>
                 </tr>
             </tbody>
         </table>

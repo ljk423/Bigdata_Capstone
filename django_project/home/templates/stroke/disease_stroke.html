@@ -5,185 +5,69 @@
 {% block content %}
     <main data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="container-fluid" style="margin-top:100px">
-    <h1>날짜 / 지역 : {{ 'Seoul' }}</h1>
-            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-    <!-- Content Row -->
-    <div id="morrisChart"> </div>
-        <!-- 서울 데이터 입력칸 -->
-        <script>
-            var mydata_seoul = [
-                {date : '2019-12-05', stroke : 1},
-                {date : '2019-12-06', stroke : 2},
-                {date : '2019-12-07', stroke : 3},
-                {date : '2019-12-08', stroke : 4},
-                {date : '2019-12-09', stroke : 2},
-                {date : '2019-12-10', stroke : 1},
-            ];
-            </script>
-        <!-- 인천 데이터 입력칸 -->
-        <script>
-            var mydata_인천 = [
-                {date : '2019-12-05', stroke : 1},
-                {date : '2019-12-06', stroke : 2},
-                {date : '2019-12-07', stroke : 3},
-                {date : '2019-12-08', stroke : 4},
-                {date : '2019-12-09', stroke : 2},
-                {date : '2019-12-10', stroke : 1},
-            ];
-            </script>
-        <!-- 부산 데이터 입력칸-->
-        <script>
-            var mydata_부산 = [
-                {date : '2019-12-05', stroke : 1},
-                {date : '2019-12-06', stroke : 2},
-                {date : '2019-12-07', stroke : 3},
-                {date : '2019-12-08', stroke : 4},
-                {date : '2019-12-09', stroke : 2},
-                {date : '2019-12-10', stroke : 1},
-            ];
-            </script>
-        <!-- 대전 데이터 입력칸-->
-        <script>
-            var mydata_대전 = [
-                {date : '2019-12-05', stroke : 1},
-                {date : '2019-12-06', stroke : 2},
-                {date : '2019-12-07', stroke : 3},
-                {date : '2019-12-08', stroke : 4},
-                {date : '2019-12-09', stroke : 2},
-                {date : '2019-12-10', stroke : 1},
-            ];
-            </script>
-        <!-- 광주 데이터 입력칸-->
-        <script>
-            var mydata_광주 = [
-                {date : '2019-12-05', stroke : 1},
-                {date : '2019-12-06', stroke : 2},
-                {date : '2019-12-07', stroke : 3},
-                {date : '2019-12-08', stroke : 4},
-                {date : '2019-12-09', stroke : 2},
-                {date : '2019-12-10', stroke : 1},
-            ];
-            </script>
-        <!-- -->
-        <script>
-            var mydata = [
-                {date : '2019-12-05', stroke : 1},
-                {date : '2019-12-06', stroke : 2},
-                {date : '2019-12-07', stroke : 3},
-                {date : '2019-12-08', stroke : 4},
-                {date : '2019-12-09', stroke : 2},
-                {date : '2019-12-10', stroke : 1},
-            ];
-            </script>
-    <!-- Chart 구현 칸
-         원하는 지역코드에 맞춰 출력할 data 결정
-    -->
-            <script>
-            new Morris.Line({
-                element: 'morrisChart',
-                data: mydata_seoul,
-                xkey: 'date',
-                ykeys: ['stroke'],
-                labels: ['뇌졸중지수'],
-                ymin : 1,
-                ymax : 4,
-            });
-        </script>
-        <div class="container-fluid">
+    <h1>다른 지역의 뇌졸중 정보</h1>
+    <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col" colspan="2">today</th>
+                <th scope="col" colspan="2">tomorrow</th>
+                <th scope="col" colspan="2">12-12</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">서울</th>
+                    <td>보통</td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                    <td>보통</td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                 <td>보통</td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
 
+                </tr>
+                <tr>
+                    <th scope="row">부산</th>
+                    <td>보통</td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                    <td>나쁨</td>
+                    <td><img src="/static/images/panel_red.png"width=70 height=50 ></td>
+                 <td>좋음</td>
+                    <td><img src="/static/images/panel_green.png"width=70 height=50 ></td>
 
-        <h1>오늘의 뇌졸중지수 대처요령</h1>
-    <br>
-    <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
-        {% if 4 == 4 %}
-        <div class="contact-wrap">
-        <div class="row">
-            <!-- 1. 미세먼지 카드 -->
-              <div class="card", size="width:400 rem">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">매우 나쁨</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">▶ 꾸준한 혈압, 혈당, 콜레스테롤 수치를 측정하고 정상 수준으로 유지하도록 함<br>
-            ▶ 급격한 날씨 변화에 노출되지 않도록 외출 및 환기에 주의하기<br>
-            ▶ 고혈압 뇌졸중 기왕력 환자들은 각별한 주의 요망</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-            </div>
+                </tr>
+                <tr>
+                    <th>대전</th>
+                    <td>나쁨</td>
+                    <td><img src="/static/images/panel_red.png"width=70 height=50 ></td>
+                    <td>나쁨</td>
+                    <td><img src="/static/images/panel_red.png"width=70 height=50 ></td>
+                 <td>좋음</td>
+                    <td><img src="/static/images/panel_green.png"width=70 height=50 ></td>
 
-        </div>
-        {% endif %}
-    {% if 4 == 3 %}
-        <div class="contact-wrap">
-        <div class="row">
-            <!-- 1. 미세먼지 카드 -->
-              <div class="card", size="width:400 rem">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">매우 나쁨</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">▶ 혈압측정을 꾸준히 하면서 정상 혈압이 유지되도록 함<br>
-            ▶ 건강에 더욱 관심을 가지고 추운 곳으로 외출할 경우 보온 유지하기<br>
-            ▶ 특히 온도가 낮은 새벽이나 밤 시간을 피해 외출함
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-    {% if 4 == 2 %}
-        <div class="contact-wrap">
-        <div class="row">
-            <!-- 1. 미세먼지 카드 -->
-              <div class="card", size="width:400 rem">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">매우 나쁨</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">▶ 평소 건강관리에 유의하고 규칙적인 운동과 함께 식습관 조절하기<br>
-            ▶ 뇌졸중 환자들은 외출 시 갑작스럽게 체온이 변하지 않도록 보온에 유념함
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
+                </tr>
+                <tr>
+                    <th scope="row">인천</th>
+                    <td>보통</td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                    <td><a>보통</a></td>
+                    <td><img src="/static/images/panel_yellow.png"width=70 height=50 ></td>
+                 <td><a>좋음</a></td>
+                    <td><img src="/static/images/panel_green.png"width=70 height=50 ></td>
 
-        {% endif %}
-    {% if 4 == 1 %}
-        <div class="contact-wrap">
-        <div class="row">
-            <!-- 1. 미세먼지 카드 -->
-              <div class="card", size="width:400 rem">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">매우 나쁨</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">▶ 평소 뇌졸중 예방을 위한 건강관리에 유의하여 음식 섭취를 조절하고 가벼운 운동을 함
+                </tr>
+                <tr>
+                    <th>춘천</th>
+                    <td><a >나쁨</a></td>
+                    <td><img src="/static/images/panel_red.png"width=70 height=50 ></td>
+                    <td><a>좋음</a></td>
+                    <td><img src="/static/images/panel_green.png"width=70 height=50 ></td>
+                    <td><a >좋음</a></td>
+                    <td><img src="/static/images/panel_green.png"width=70 height=50 ></td>
 
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-
-        {% endif %}
-    <!-- 위 4가지 형식으로 대처 요령을 제공, 이후 DB model date == today 이런 식으로 해서 제 값을 넣는다. -->
+                </tr>
+            </tbody>
+        </table>
     </div>
     </main>
 {% endblock %}

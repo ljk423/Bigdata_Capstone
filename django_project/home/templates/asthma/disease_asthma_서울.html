@@ -5,7 +5,7 @@
 {% block content %}
     <main data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="container-fluid" style="margin-top:100px">
-    <h1>날짜 / 지역 : 서울</h1>
+    <h1>Dec 10 Seoul</h1>
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
@@ -15,12 +15,13 @@
         <!-- 서울 데이터 입력칸 -->
         <script>
             var mydata_seoul = [
-                {date : '2019-12-05', stroke : 1},
-                {date : '2019-12-06', stroke : 2},
+
                 {date : '2019-12-07', stroke : 3},
                 {date : '2019-12-08', stroke : 4},
                 {date : '2019-12-09', stroke : 2},
-                {date : '2019-12-10', stroke : 1},
+                {date : '2019-12-10', stroke : 2},
+                {date : '2019-12-11', stroke : 1},
+                {date : '2019-12-12', stroke : 2},
             ];
             </script>
 
@@ -33,7 +34,7 @@
                 data: mydata_seoul,
                 xkey: 'date',
                 ykeys: ['stroke'],
-                labels: ['뇌졸중지수'],
+                labels: ['감기지수'],
                 ymin : 1,
                 ymax : 4,
             });
@@ -41,10 +42,10 @@
         <div class="container-fluid">
 
 
-        <h1>오늘의 감기지수 대처요령</h1>
+        <h1>오늘의 천식지수 대처요령</h1>
     <br>
-    <h5>당일 지수에 따라 대처하는 요령 4가지 작성 후 출력</h5>
-        {% if 4 == 4 %}
+
+        {% if 2 == 4 %}
         <div class="contact-wrap">
         <div class="row">
               <div class="card", size="width:400 rem">
@@ -66,7 +67,7 @@
 
         </div>
         {% endif %}
-    {% if 4 == 3 %}
+    {% if 2 == 3 %}
         <div class="contact-wrap">
         <div class="row">
 
@@ -87,7 +88,7 @@
             </div>
         </div>
         {% endif %}
-    {% if 4 == 2 %}
+    {% if 2 == 2 %}
         <div class="contact-wrap">
         <div class="row">
 
@@ -109,7 +110,7 @@
         </div>
 
         {% endif %}
-    {% if 4 == 1 %}
+    {% if 2 == 1 %}
         <div class="contact-wrap">
         <div class="row">
             <!-- 1. 미세먼지 카드 -->
