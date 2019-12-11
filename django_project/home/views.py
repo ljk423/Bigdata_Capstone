@@ -53,12 +53,36 @@ def disease_Asthma(request):
 
     return render(request, 'asthma/disease_asthma_서울.html', {'indexes':indexes})
 
-def disease_Cold(request):
+def disease_Cold_서울(request):
     #1. create datapool with the data
 
     indexes = models.ColdIndex.objects.order_by('date')
-    return render(request, 'cold/disease_cold.html', {'indexes':indexes})
+    return render(request, 'cold/disease_cold_서울.html', {'indexes':indexes})
+def disease_Cold_부산(request):
+    #1. create datapool with the data
 
+    indexes = models.ColdIndex.objects.order_by('date')
+    return render(request, 'cold/disease_cold_부산.html', {'indexes':indexes})
+def disease_Cold_대전(request):
+    #1. create datapool with the data
+
+    indexes = models.ColdIndex.objects.order_by('date')
+    return render(request, 'cold/disease_cold_대전.html', {'indexes':indexes})
+def disease_Cold_광주(request):
+    #1. create datapool with the data
+
+    indexes = models.ColdIndex.objects.order_by('date')
+    return render(request, 'cold/disease_cold_광주.html', {'indexes':indexes})
+def disease_Cold_춘천(request):
+    #1. create datapool with the data
+
+    indexes = models.ColdIndex.objects.order_by('date')
+    return render(request, 'cold/disease_cold_춘천.html', {'indexes':indexes})
+def disease_Cold_인천(request):
+    #1. create datapool with the data
+
+    indexes = models.ColdIndex.objects.order_by('date')
+    return render(request, 'cold/disease_cold_인천.html', {'indexes':indexes})
 def disease_Stroke(request):
     #1. create datapool with the data
     indexes = models.StrokeIndex.objects.order_by('date')
