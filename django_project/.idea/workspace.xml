@@ -60,7 +60,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates/cold" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates/asthma" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,19 +70,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\new\Bigdata_Capstone\django_project\home\templates\asthma" />
+      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\cold" />
+      <recent name="C:\git\Bigdata_Capstone\django_project\home\static\images" />
+      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\mainpage" />
+      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\stroke" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\asthma" />
       <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\cold" />
       <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\stroke" />
       <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\mainpage" />
       <recent name="C:\git\Bigdata_Capstone\django_project\home\static\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\cold" />
-      <recent name="C:\git\Bigdata_Capstone\django_project\home\static\images" />
-      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\mainpage" />
-      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates\stroke" />
-      <recent name="C:\git\Bigdata_Capstone\django_project\home\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -162,6 +162,7 @@
       <workItem from="1576047215636" duration="1748000" />
       <workItem from="1576049578434" duration="2574000" />
       <workItem from="1576053040139" duration="5672000" />
+      <workItem from="1576059812753" duration="3081000" />
     </task>
     <servers />
   </component>
