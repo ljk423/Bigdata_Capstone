@@ -6,7 +6,7 @@
 
 <div class="container">
   <h1>Login</h1>
-    <form method="POST" action="{% url 'mainpage' %}">
+    <form method="POST" action="{% url 'localcode' %}">
         {% csrf_token %}
         Username:
         <br>
@@ -16,6 +16,6 @@
         <br>
         <input name="password" type="password">
         <br><br>
-        <input type="submit" class="btn btn-primary" value="mainpage">
+        <input type="submit" class="btn btn-primary" value="localcode">
     </form>
 </div>

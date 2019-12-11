@@ -19,30 +19,58 @@ def loginpage(request):
     else:
         return render(request, 'loginpage.html')
 
-def mainpage(request):
-    indexes = models.MainWeatherIndex.objects.order_by('name')
-    return render(request, 'mainpage.html',{'indexes': indexes})
+def localcode(request):
+    indexes = models.LocalCode.objects.order_by('name')
+    return render(request, 'localcode.html', {'indexes':indexes})
 
-def mainpage1(request):
+
+def mainpage_춘천(request):
     indexes = models.MainWeatherIndex.objects.order_by('name')
-    return render(request, 'mainpage1.html',{'indexes': indexes})
+    return render(request, 'mainpage/mainpage_춘천.html', {'indexes': indexes})
+
+def mainpage_대전(request):
+    indexes = models.MainWeatherIndex.objects.order_by('name')
+    return render(request, 'mainpage/mainpage_대전.html', {'indexes': indexes})
+
+def mainpage_서울(request):
+    indexes = models.MainWeatherIndex.objects.order_by('name')
+    return render(request, 'mainpage/mainpage_서울.html', {'indexes': indexes})
+
+def mainpage_부산(request):
+    indexes = models.MainWeatherIndex.objects.order_by('name')
+    return render(request, 'mainpage/mainpage_부산.html', {'indexes': indexes})
+
+def mainpage_광주(request):
+    indexes = models.MainWeatherIndex.objects.order_by('name')
+    return render(request, 'mainpage/mainpage_광주.html', {'indexes': indexes})
+def mainpage_인천(request):
+    indexes = models.MainWeatherIndex.objects.order_by('name')
+    return render(request, 'mainpage/mainpage_인천.html', {'indexes': indexes})
 
 def disease_Asthma(request):
     #1. create datapool with the data
     indexes = models.AsthmaIndex.objects.order_by('date')
 
-    return render(request, 'disease_asthma.html', {'indexes':indexes})
+    return render(request, 'asthma/disease_asthma.html', {'indexes':indexes})
 
 def disease_Cold(request):
     #1. create datapool with the data
-    indexes = models.AsthmaIndex.objects.order_by('date')
-    return render(request, 'disease_cold.html', {'indexes':indexes})
+
+    indexes = models.ColdIndex.objects.order_by('date')
+    return render(request, 'cold/disease_cold.html', {'indexes':indexes})
 
 def disease_Stroke(request):
     #1. create datapool with the data
-    indexes = [1, 2, 2, 2, 1]
-    indexes_as_json = json.dumps(indexes)
-    return render(request, 'disease_stroke.html', {'indexes':indexes_as_json})
+    indexes = models.StrokeIndex.objects.order_by('date')
+    ## dictionary, list식으로 전달 후 template에서 정해진 자리에 맞춰 사용
+
+    return render(request, 'stroke/disease_stroke.html', {'indexes':indexes})
+
+def mainpage_new(request):
+    indexes = models.MainWeatherIndex.objects.order_by('name')
+    return render(request, 'mainpage/mainpage_new.html', {'indexes': indexes}, {'region' : 'Seoul'})
+
+
 
 def signup(request):
     return render(request, 'signup.html')

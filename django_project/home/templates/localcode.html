@@ -1,0 +1,89 @@
+{% extends 'navbar.html' %}
+
+{% block header %}
+ local page
+{% endblock %}
+
+{% block content %}
+
+    <main data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="container-fluid" style="margin-top:80px">
+    <div class="site-section" id="classes-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-8  section-heading">
+            <span class="subheading">Daily Index</span>
+            <h2 class="heading mb-3"></h2>
+            <p>원하시는 지역 코드를 골라 주세요</p>
+          </div>
+        </div>
+          <div class="container-fluid">
+              <div class="row">
+
+          <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href={% url 'mainpage_서울' %}, class="class-item-thumbnail">
+                <img src= "/static/images/seoul.png", alt = "image">
+              </a>
+              <div class="class-item-text">
+                <h2><a href= {% url 'mainpage_서울' %}>서울</a></h2>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href= "{% url 'mainpage_부산' %}", class="class-item-thumbnail">
+                <img src= "/static/images/busan.png", alt = "image">
+              </a>
+              <div class="class-item-text">
+                <h2><a href= {% url 'mainpage_부산' %} %}>부산</a></h2>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href={% url 'mainpage_광주' %}, class="class-item-thumbnail">
+                <img src= "/static/images/gwangju.png", alt = "image">
+              </a>
+              <div class="class-item-text">
+                <h2><a href= {% url 'mainpage_광주' %}>광주</a></h2>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href= "{% url 'mainpage_인천' %}", class="class-item-thumbnail">
+                <img src= "/static/images/incheon.png", alt = "image">
+              </a>
+              <div class="class-item-text">
+                <h2><a href= {% url 'mainpage_인천' %} %}>인천</a></h2>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href={% url 'mainpage_대전' %}, class="class-item-thumbnail">
+                <img src= "/static/images/daejeon.png", alt = "image">
+              </a>
+              <div class="class-item-text">
+                <h2><a href= {% url 'mainpage_대전' %}>대전</a></h2>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href= "{% url 'mainpage_춘천' %}", class="class-item-thumbnail">
+                <img src= "/static/images/chuncheon.png", alt = "image">
+              </a>
+              <div class="class-item-text">
+                <h2><a href= {% url 'mainpage_춘천' %} %}>춘천</a></h2>
+              </div>
+            </div>
+          </div>
+
+          </div>
+      </div>
+    </div>
+    </div>
+
+{% endblock %}
